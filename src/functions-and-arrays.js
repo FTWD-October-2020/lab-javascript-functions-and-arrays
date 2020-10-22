@@ -45,6 +45,31 @@ function sumNumbers(numbers) {
   return sum;
 }
 
+// Iteration #3 BONUS: Generic Sum Function
+
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+
+function sum(arr) {
+  let count = 0;
+  for (let i of arr) {
+    switch(typeof(i)) {
+      case "string":
+        count += i.length;
+        break;
+      case "number":
+        count += i;
+        break;
+      case "boolean":
+        if (i) {count++};
+        break;
+      default:
+        throw new Error("Unsupported data type sir or ma'am");
+        break;
+    }
+  }
+  return count
+}
+
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
