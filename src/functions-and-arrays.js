@@ -91,6 +91,18 @@ function averageWordLength(words) {
   return sum / words.length || null
 }
 
+function round(num) {
+  return Math.round(num *100) / 100;
+}
+function avg(numbersAvg) {
+  return round((sum(numbersAvg) /numbersAvg.length)) || null;
+} 
+// function avg(numbersAvg) {
+//   return (sum(numbersAvg) /numbersAvg.length).toFixed(2) || null;
+// } 
+
+
+
 // Iteration #5: Unique arrays
 const wordsUnique = [
   'crab',
